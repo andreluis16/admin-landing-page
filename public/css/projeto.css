@@ -1,0 +1,75 @@
+.container__projeto {
+    background: linear-gradient(112.47deg, #18648E 35.74%, #C80BCA 130%);
+    mix-blend-mode: multiply;
+    height: 560px;
+    width: 100vw;
+}
+
+.img1{
+    background-image: url(../img/nutrindo-esperança.JPG);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+    width: 100%;
+    height: 100vh;
+}
+.img2{
+    background-image: url(../img/cuidado-solidário.JPG);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+    width: 100%;
+    height: 100vh;
+}
+.img3{
+    background-image: url(../img/um\ sorriso\ por\ mais\ esperança\ .jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+    width: 100%;
+    height: 100vh;
+}
+.img4{
+    background-image: url(../img/papo\ de\ mulher.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+    width: 100%;
+    height: 100vh;
+}
+.img5{
+    background-image: url(../img/solidarite.jpeg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+    width: 100%;
+    height: 100vh;
+}
+
+.texto__projeto {
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    top: 370px;
+    text-align: left;
+    width: 311px;
+    margin-left: 24px;
+}
+
+.texto__projeto h3{
+    font-size: 24px;
+}
+
+.texto__projeto p{
+    font-size: 20px;
+}

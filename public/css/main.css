@@ -1,0 +1,431 @@
+
+/* mobile first */
+.container{
+    margin: 21px 0;
+}
+/* Ajudar */
+.ajudar{
+    width: 100%;
+    height: auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.title h3{
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 39.01px;
+    text-align: center;
+}
+
+.title__paragrafo{
+    display: none;
+}
+.title p{
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19.5px;
+    text-align: center;
+    color: #282828;
+}
+.content__ajuda__prima{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content__ajuda{
+    margin: 0 24px;
+    display: flex;
+    flex-direction: column;
+}
+.content__ajuda h3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+}
+
+.content__list{
+    display: flex;
+    align-self: center;
+    text-decoration: none;
+    list-style: none;
+    padding-top: 7px;
+    font-size: 16px;
+    line-height: normal;
+}
+.content__ajuda p{
+    width: 90%;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 19.5px;
+    text-align: left;
+    max-width: 443px;
+}
+.content_ajuda_icon{
+    width: 30px;
+    margin-right: 10px;
+}
+.content__form{
+    width: 100%;
+    max-width: 500px;
+    height: 358px;
+    margin-top: 51px;
+}
+.content__form form label{
+    display: block;
+    font-size: 1rem;
+    padding-top: 20px;
+    margin: 0 24px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24.38px;
+}
+.content__form form label:nth-child(1){
+    padding: 0;
+    font-size: 20px;
+}
+.content__form form input{
+    display: block;
+    width: 95%;
+    height: 35px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #BF1260;
+}
+.content__form .content__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center ;
+    align-content: center;
+}
+.content__enviar{
+    width: 179px;
+    padding: 18px;
+    margin-top: 48px;
+    
+    border: none;
+    border-radius: 8px;
+    background-color: #BF1260;
+
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+/* parceiros */
+.parceiros{
+    width: 100%;
+    height: auto;
+    margin: 48px 0;
+}
+.parceiros__logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.parceiros__logo img{
+    width: 100%;
+}
+/* contato */
+
+.contato{
+    width: 100vw;
+    height: 100vh;
+    background:  linear-gradient(112.47deg, #03324b 35.74%, #2501a7 130%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contato__imagem{
+    background-image: url(../img/bg-secao-localizacao.jpeg);
+    mix-blend-mode: multiply;
+    background-size: cover;
+    position: absolute;
+    /* -webkit-mask-image: linear-gradient(to top, transparent 3%, black 200%); */
+    filter: brightness(90%);
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+}
+.contato__endereco{
+    position: relative;
+    width: 90%;
+}
+.contato__endereco i,.contato__endereco h3{
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.contato__endereco___inf{
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+}
+.contato__endereco___inf p{
+    margin-left: 18px;
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: normal;
+}
+.contato__iframe{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contato__iframe___mapa{
+    width: 100vw;
+    height: 280px;
+    position: relative;
+}
+
+.uil-map-marker, .uil-envelope, .uil-phone-volume{
+    margin-right: 4px;
+}
+
+@media only screen and (min-width: 768px){
+    .contato{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contato__endereco{
+        width: 40%;
+        margin-left: 12px;
+        margin-right: 16px;
+    }
+
+    .contato__iframe{
+        width: 60%;
+    }
+
+    .contato__iframe___mapa{
+        width: 400px;
+        height: 280px;
+    }
+
+    .content__ajuda__prima{
+        width: 100%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content__form{
+        width: 100%;
+    }
+
+    .parceiros__logo{
+        flex-direction: row;
+        margin: 0 auto;
+    }
+}
+
+/* desktop */
+@media only screen and (min-width: 1024px){
+    /* Ajudar*/
+    .ajudar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .title__paragrafo{
+        display: block;
+    }
+    .title h2{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 58,41px;
+        text-align: center;
+    }
+    .title p{
+        font: normal 400 20px;
+        text-align: center;
+        color: #282828;
+    }
+
+    .container{
+        max-width: 100vh;
+    }
+
+    .content__ajuda__prima{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+    .content__ajuda{
+        width: 100%;
+        margin: 0;
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content__ajuda__div{
+        margin-right: 50px;
+    }
+
+    .content__ajuda ul{
+        margin-top: 20px;
+    }
+
+    .content__ajuda h3{
+        text-align: left;
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    .content__list{
+        display: flex;
+        align-content: center;
+
+        text-decoration: none;
+        list-style: none;
+        padding: 10px;
+
+        font-size: 20px;
+        line-height: normal;
+    }
+    .content__ajuda p{
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: normal;
+    }
+    .title__paragrafo__secundario{
+        display: none;
+    }
+    .content_ajuda_icon{
+        width: 30px;
+        margin-right: 10px;
+    }
+    .content__form{
+        width: 476px;
+        margin-top: 0;
+    }
+    .content__form form label{
+        display: block;
+        font-size: 1rem;
+        padding-top: 20px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .content__form form label:nth-child(1){
+        padding: 0;
+    }
+    .content__form form input{
+        display: block;
+        width: 100%;
+        height: 35px;
+        padding: 5px;
+        border: none;
+        border-bottom: 2px solid #BF1260;
+    }
+    .content__form .content__button{
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+    .content__enviar{
+        width: 179px;
+        padding: 18px;
+        margin-top: 59px;
+
+        border: none;
+        border-radius: 8px;
+        background-color: #BF1260;
+
+        font-size: 20px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    /* Parceiros */
+    .parceiros{
+        width: 100%;
+        height:380px;
+    }
+   
+    .parceiros__logo{
+        flex-direction: row;
+    }
+    .parceiros__logo img{
+        width: auto;
+    }
+
+    /* contato */
+    .contato{
+        width: 100%;
+        height: 100vh;
+        background:  linear-gradient(112.47deg, #03324b 35.74%, #2501a7 130%);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+    }
+    
+    .contato__imagem{
+        background-image: url(../img/bg-secao-localizacao.jpeg);
+        mix-blend-mode: multiply;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        -webkit-mask-image: linear-gradient(to top, transparent 3%, black 200%);
+        filter: brightness(90%);
+        width: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        height: 100%;
+        margin: 0;
+    }
+
+    .contato__endereco{
+        width: 45%;
+        margin-left: 64px;
+    }
+
+    .contato__endereco i,.contato__endereco h3{
+        font-size: 32px;
+        font-weight: 100;
+        color: #ffffff;
+    }
+    .contato__endereco___inf{
+        padding: 10px;
+    }
+
+    .contato__endereco___inf p{
+        color:#ffffff;
+        font-size: 24px;
+        font-weight: normal;
+    }
+    .contato__iframe{
+        width: 55%;
+    }
+    .contato__iframe___mapa{
+        width: 650px;
+        height: 394px;
+    }
+
+}

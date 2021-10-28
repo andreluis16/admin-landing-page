@@ -1,0 +1,153 @@
+.cabecalho{
+  width: auto;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items:  center;
+}
+
+/* Para versão mobile não aparece. Ajeitar depois*/
+#navbar{
+  display: none;
+}
+
+.menu{
+  position: fixed;
+  left: calc(100% - 150px);
+  top: 0;
+  height: 100%;
+  width: 150px;
+  background-color: #fff;
+  box-shadow: 4px 4px 11px 2px rgba(0, 0, 0, 0.1), -4px -4px 11px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  padding-top: 48px;
+  overflow-x: hidden;
+}
+
+.menu__link{
+  padding: 8px 8px 8px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #282828;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  display: block;
+}
+
+.menu .close__menu{
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  margin-left: 64px;
+}
+
+.times{
+  font-size: 3rem;
+}
+
+.botao__cabecalho{
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.burger__icon{
+  font-size: 2rem;
+}
+
+@media  only screen and (min-device-width: 768px){
+  .burger__icon{
+    font-size: 3rem;
+  }
+
+  .menu{
+    left: calc(768px - 150px);
+  }
+}
+
+@media  only screen and (min-device-width: 1024px){
+  .cabecalho{
+    width: 100vw;
+    max-width: 1100px;
+    height: 80px;
+    box-sizing: border-box;
+    margin: 20px 128px;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .logo{
+    width: 20%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  #navbar{
+    display: inline-block;
+  }
+
+  .botao__cabecalho{
+    display: none;
+  }
+
+  .menu{
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+    position: inherit;
+
+    display: flex;
+  }
+
+  .menu__item{
+    float: left;
+  }
+
+  .menu__lista{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .menu__link{
+    display: block;
+    color: #282828;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    Line-height: 21.94px;
+  }
+
+  .menu__link__contato{
+    font-weight: 400;
+    padding: 10px 44px;
+    border: 1px solid #282828;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .menu__link__contato:hover{
+    background-color: #BF1260;
+    color: wheat;
+    border-color: #BF1260;
+  }
+
+  .menu .close__menu{
+    display: none;
+  }
+
+}

@@ -1,0 +1,18 @@
+.logo{
+  width: 84px;
+  height: 37px;
+}
+
+@media  only screen and (min-device-width: 768px){
+  .logo{
+    width: 125px;
+    height: 55.06px;
+  }
+}
+
+@media  only screen and (min-device-width: 1024px){
+  .logo{
+    width: 190px;
+    height: 84.93px;
+  }
+}
