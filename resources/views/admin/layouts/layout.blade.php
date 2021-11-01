@@ -8,6 +8,7 @@
     <title>Instituto Batucando Esperança</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/admin/admin.css') }}" rel="stylesheet">
     <link href="{{ asset('css/admin/style.css') }}" rel="stylesheet">
 
 </head>

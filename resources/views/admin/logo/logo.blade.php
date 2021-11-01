@@ -1,6 +1,13 @@
 @extends('admin.index')
 
 @section('table')
+
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{ session('message') }}
+        </div>
+    @endif
+
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
@@ -26,8 +33,8 @@
                     @foreach ($logos as $logo)
                         <tr>
                             <td>{{ $logo->id }}</td>
-                            <td><img src="{{ $logo->logo }}" alt="logo-img"></td>
-                            <td><a class="btn btn-primary" href="">Editar</a></td>
+                            <td><img src="{{ url("storage/{$logo->logo}") }}" class="img-small" alt="logo-img"></td>
+                            <td><a class="btn btn-primary" href="{{ route('admin.logo.edit', $logo->id) }}">Editar</a></td>
                         </tr>
                     @endforeach
                 </tbody>
