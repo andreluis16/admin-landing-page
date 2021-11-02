@@ -5,7 +5,9 @@
     <!--CABEÇALHO - Neilton-->
     <header class="cabecalho">
         <div class="logo">
-            <img src="./img/logo.svg" alt="logotipo do instituto Batucando Esperança">
+            @foreach ($logos as $logo )
+            <img src="{{ url("storage/{$logo->logo}") }}" alt="logotipo do instituto Batucando Esperança">
+            @endforeach
         </div>
 
         <button class="botao__cabecalho" type="button" data-toggle="collapse" onclick="openMenu()" data-target="#navbar">

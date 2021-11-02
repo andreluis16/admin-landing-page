@@ -17,7 +17,7 @@ class LogoController extends Controller
         }
 
         $logos = Logo::all();
-        return view('admin.logo.logo', compact('logos'));
+        return view('admin.logo.table', compact('logos'));
     }
 
     public function edit($id)
