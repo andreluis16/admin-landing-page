@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
     <title>Instituto Batucando Esperança</title>
+    <style>
+        .imagem__background {
+            @foreach($initialSections as $initialSection)
+            background-image: url( {{ url("storage/{$initialSection->image}") }} );
+            @endforeach
+            background-size: cover;
+            height: 100%;
+            left: -40px;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to top, transparent 3%, black 200%);
+            width: 100%;
+        }
+
+    </style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/normalize.css') }}" rel="stylesheet">

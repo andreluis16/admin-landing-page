@@ -36,10 +36,12 @@
                         </figure>
                     </div>
                     <div class="descricao__background">
-                        <h1>O BATUQUE SOLIDÁRIO</h1>
+                        @foreach ($initialSections as $initialSection )
+                        <h1>{{ $initialSection->title }}</h1>
                         <p>
-                            Usamos a música como instrumento de desenvolvimento sociocultural de crianças e adolescentes do bairro da Vila Palmeira, aproximando-os de oportunidades e afastandoos da criminalidade
+                            {{ $initialSection->content }}
                         </p>
+                        @endforeach
                     </div>
                     <div class="botao__video">
                         <a href="#video" class="play__video"><i class="uil uil-play-circle link_play"></i>Ver vídeo</a>
@@ -50,13 +52,15 @@
 
         <!--SESSÂO QUEM SOMOS Beatriz-->
         <section class="sobre" id="quem-somos">
+            @foreach ($areSections as $areSection)
             <div class="sombra__secao">
-                <h2>QUEM SOMOS</h2>
+                <h2>{{ $areSection->title }}</h2>
             </div>
             <div class="titulo__secao">
-                <h3>Quem somos</h3>
+                <h3>{{ $areSection->title }}</h3>
             </div>
-            <p class="pilares">Nossos pilares de transformação</p>
+            <p class="pilares">{{ $areSection->phrase }}</p>
+            @endforeach
             <div class="sobre__cards">
                 <div class="borda__sobre">
                     <h3 class="titulo__sobre"><i class="uil uil-bullseye"></i>Missão</h3>
