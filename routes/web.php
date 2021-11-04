@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AreSectionController;
+use App\Http\Controllers\CardSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
@@ -28,6 +29,14 @@ Route::put('/admin/initial-section/update/{id}', [InitialSectionController::clas
 Route::get('/admin/are-section', [AreSectionController::class, 'list'])->name('admin.are-section');
 Route::get('/admin/are-section/edit/{id}', [AreSectionController::class, 'edit'])->name('admin.are-section.edit');
 Route::put('/admin/are-section/update/{id}', [AreSectionController::class, 'update'])->name('admin.are-section.update');
+
+//Admin Card Section
+Route::get('/admin/card-section', [CardSectionController::class, 'list'])->name('admin.card-section');
+Route::get('/admin/card-section/create-form', [CardSectionController::class, 'createForm'])->name('admin.card-section.create-form');
+Route::post('/admin/card-section/create-save', [CardSectionController::class, 'create'])->name('admin.card-section.create-save');
+Route::get('/admin/card-section/edit/{id}', [CardSectionController::class, 'edit'])->name('admin.card-section.edit');
+Route::put('/admin/card-section/update/{id}', [CardSectionController::class, 'update'])->name('admin.card-section.update');
+Route::delete('/admin/card-section/delete/{id}', [CardSectionController::class, 'delete'])->name('admin.card-section.delete');
 
 Auth::routes();
 

@@ -90,6 +90,12 @@
                                         <a class="nav-link" href="{{ route('admin.are-section') }}">Are Section table</a>
                                     </nav>
                                 </div>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ route('admin.card-section') }}">Card Section table</a>
+                                    </nav>
+                                </div>
                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                                     data-bs-target="#pagesCollapseError" aria-expanded="false"
                                     aria-controls="pagesCollapseError">

@@ -61,26 +61,18 @@
             </div>
             <p class="pilares">{{ $areSection->phrase }}</p>
             @endforeach
+
             <div class="sobre__cards">
+                @foreach ($cardSections as $cardSection )
                 <div class="borda__sobre">
-                    <h3 class="titulo__sobre"><i class="uil uil-bullseye"></i>Missão</h3>
+                    <h3 class="titulo__sobre"><i class="{{ $cardSection->icon }}"></i>{{ $cardSection->title }}</h3>
                     <p class="texto__sobre">
-                        Oportunizar experiências educativas e sociais, principalmente por meio da música, objetivando inclusão, desenvolvimento social e construção cidadã de crianças e adolescentes em vulnerabilidade social.
+                        {{ $cardSection->content }}
                     </p>
                 </div>
-                <div class="borda__sobre">
-                    <h3 class="titulo__sobre"><i class="uil uil-eye"></i>Visão</h3>
-                    <p class="texto__sobre">
-                        Ser referência no desenvolvimento de habilidades musicais de crianças e adolescentes em vulnerabilidade social na região metropolitana de São Luís, fazendo uso do ensino de música como meio de transformação e incentivo ao protagonismo social.
-                    </p>
-                </div>
-                <div class="borda__sobre">
-                    <h3 class="titulo__sobre"><i class="uil uil-heart"></i>Valores</h3>
-                    <p class="texto__sobre">
-                        Compromisso, Transparência, Criatividade, Respeito, Solidariedade.
-                    </p>
-                </div>
+                @endforeach
             </div>
+
         </section>
 
         <!--SESSÂO NOSSOS PROJETOS Beatriz-->

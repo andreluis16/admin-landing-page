@@ -14,22 +14,24 @@
     @endif
 
 
-    <form method="POST" action="{{ route('admin.initial-section.update', $section->id) }}" enctype="multipart/form-data"
-        class="m-5">
+    <form method="POST" action="{{ route('admin.card-section.update', $section->id) }}" class="m-5">
         @csrf
-        @method('put')
+        @method('put');
         <div class="form-group">
-            <label for="">Title</label>
-            <input type="text" name="title" class="form-control" value="{{ $section->title }}">
+            <label for="">Icon Class</label>
+            <input type="text" name="icon" class="form-control" value="{{ $section->icon }}">
+            <a href="https://iconscout.com/unicons/explore/line" target="_blank">Get the icon here</a>
         </div>
         <div class="form-group">
-            <input type="file" name="image" class="form-control-file">
+            <label for="">Title</label>
+            <input type="text" name="title" class="form-control"value="{{ $section->title }}">
         </div>
         <div class="form-group">
             <label for="">Content</label>
             <textarea name="content" class="form-control">{{ $section->content }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Edit Section</button>
+
+        <button type="submit" class="btn btn-primary">Edit card</button>
     </form>
 
 @endsection
