@@ -32,7 +32,7 @@ class LogoController extends Controller
     {
 
         if (!$logo = Logo::find($id)) {
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.index')->with('message', 'id not found');
         }
 
         $data = $request->all();
@@ -47,6 +47,6 @@ class LogoController extends Controller
         }
 
         $logo->update($data);
-        return redirect()->route('admin.logo')->with('message', 'Logo alterada com sucesso');
+        return redirect()->route('admin.logo')->with('message', 'Logo was edited');
     }
 }

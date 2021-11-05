@@ -6,6 +6,7 @@ use App\Http\Controllers\CardSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
+use App\Http\Controllers\ProjectsSectionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,11 @@ Route::post('/admin/card-section/create-save', [CardSectionController::class, 'c
 Route::get('/admin/card-section/edit/{id}', [CardSectionController::class, 'edit'])->name('admin.card-section.edit');
 Route::put('/admin/card-section/update/{id}', [CardSectionController::class, 'update'])->name('admin.card-section.update');
 Route::delete('/admin/card-section/delete/{id}', [CardSectionController::class, 'delete'])->name('admin.card-section.delete');
+
+//Admin Projects Section
+Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');
+Route::get('/admin/projects-section/edit/{id}', [ProjectsSectionController::class, 'edit'])->name('admin.projects-section.edit');
+Route::put('/admin/projects-section/update/{id}', [ProjectsSectionController::class, 'update'])->name('admin.projects-section.update');
 
 Auth::routes();
 
