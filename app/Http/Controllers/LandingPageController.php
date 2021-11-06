@@ -7,6 +7,7 @@ use App\Models\CardSection;
 use App\Models\InitialSection;
 use App\Models\Logo;
 use App\Models\ProjectsSection;
+use App\Models\SlideSection;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -18,7 +19,8 @@ class LandingPageController extends Controller
         $areSections = AreSection::all();
         $cardSections = CardSection::all();
         $projectsSections = ProjectsSection::all();
+        $slideSections = SlideSection::all();
 
-        return view('index', compact('logos', 'initialSections', 'areSections', 'cardSections', 'projectsSections'));
+        return view('index', compact('logos', 'initialSections', 'areSections', 'cardSections', 'projectsSections', 'slideSections'));
     }
 }

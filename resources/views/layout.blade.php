@@ -13,16 +13,28 @@
     <title>Instituto Batucando Esperança</title>
     <style>
         .imagem__background {
-            @foreach($initialSections as $initialSection)
-            background-image: url( {{ url("storage/{$initialSection->image}") }} );
-            @endforeach
-            background-size: cover;
+            @foreach ($initialSections as $initialSection)background-image: url({{ url("storage/{$initialSection->image}") }} );
+            @endforeach background-size: cover;
             height: 100%;
             left: -40px;
             position: relative;
             -webkit-mask-image: linear-gradient(to top, transparent 3%, black 200%);
             width: 100%;
         }
+
+        @foreach ($slideSections as $key => $slideSection)
+        .img{{ $slideSection->id }} {
+            background-image: url({{ url("storage/{$slideSection->image}") }});
+            background-size: cover;
+            background-position: center;
+            margin: 0 0;
+            position: relative;
+            -webkit-mask-image: linear-gradient(to top, transparent 3%, black 100%);
+            width: 100%;
+            height: 100vh;
+        }
+
+        @endforeach
 
     </style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

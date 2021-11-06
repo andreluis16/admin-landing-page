@@ -91,65 +91,20 @@
             @endforeach
             <article class="c-carousel c-carousel--simple">
                 <div class="c-carousel__slides js-carousel--simple">
+                    @foreach ($slideSections as $slideSection)
                     <article class="c-carousel__slide">
                         <div class="container__projeto">
-                            <figure class="img1"></figure>
+                            <figure class="img{{ $slideSection->id }}"></figure>
                         </div>
                         <div class="texto__projeto">
-                            <h3>Nutrindo a esperança</h3>
+                            <h3>{{ $slideSection->title }}</h3>
                             <p>
-                                Acompanhamento nutricional e criação do cardápio do lanchinho semanal
+                                {{ $slideSection->content }}
                             </p>
                         </div>
                     </article>
+                    @endforeach
 
-                    <article class="c-carousel__slide">
-                        <div class="container__projeto">
-                            <figure class="img2"></figure>
-                        </div>
-                        <div class="texto__projeto">
-                            <h3>Cuidado Solidário</h3>
-                            <p>
-                                Consultas pediátricas para um desenvolvimento mais saudável
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="c-carousel__slide ">
-                        <div class="container__projeto " ">
-                                    <figure class="img3">
-                            </figure>
-                        </div>
-                        <div class="texto__projeto">
-                            <h3>Um sorriso por mais esperança</h3>
-                            <p>
-                                Atendimento odontológico para sorrisos mais lindos
-                            </p>
-                        </div>
-                    </article>
-                    <article class="c-carousel__slide ">
-                        <div class="container__projeto">
-                            <figure class="img4"></figure>
-                        </div>
-                        <div class="texto__projeto">
-                            <h3>Papo de mulher</h3>
-                            <p>
-                                Roda de conversa para valorização e confraternização com as mães dos batuqueiros
-                            </p>
-                        </div>
-                    </article>
-                    <article class="c-carousel__slide ">
-                        <div class="container__projeto">
-                            <figure class="img5"></figure>
-                        </div>
-                        <div class="texto__projeto">
-                            <h3>Solidaritê</h3>
-                            <p>
-                                Parceria com a empresa maranhense Santê, que doa para o Instituto 1 hora de aula a cada
-                                venda de camisa da linha Santê Pikeno
-                            </p>
-                        </div>
-                    </article>
                 </div>
                 <div class="js-carousel--simple-dots " role="tablist "></div>
             </article>

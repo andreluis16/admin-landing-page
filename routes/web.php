@@ -7,6 +7,7 @@ use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\ProjectsSectionController;
+use App\Http\Controllers\SlideSectionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,14 @@ Route::post('/admin/card-section/create-save', [CardSectionController::class, 'c
 Route::get('/admin/card-section/edit/{id}', [CardSectionController::class, 'edit'])->name('admin.card-section.edit');
 Route::put('/admin/card-section/update/{id}', [CardSectionController::class, 'update'])->name('admin.card-section.update');
 Route::delete('/admin/card-section/delete/{id}', [CardSectionController::class, 'delete'])->name('admin.card-section.delete');
+
+//Admin Slide Section
+Route::get('/admin/slide-section', [SlideSectionController::class, 'list'])->name('admin.slide-section');
+Route::get('/admin/slide-section/create-form', [SlideSectionController::class, 'createForm'])->name('admin.slide-section.create-form');
+Route::post('/admin/slide-section/create-save', [SlideSectionController::class, 'create'])->name('admin.slide-section.create-save');
+Route::get('/admin/slide-section/edit/{id}', [SlideSectionController::class, 'edit'])->name('admin.slide-section.edit');
+Route::put('/admin/slide-section/update/{id}', [SlideSectionController::class, 'update'])->name('admin.slide-section.update');
+Route::delete('/admin/slide-section/delete/{id}', [SlideSectionController::class, 'delete'])->name('admin.slide-section.delete');
 
 //Admin Projects Section
 Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');
