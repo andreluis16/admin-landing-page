@@ -113,13 +113,15 @@
 
         <!--SESSÃO NOSSOS BATUQUEIROS Beatriz-->
         <section class="batuqueiros" id="batuqueiros">
+            @foreach ($drummerSections as $drummerSection)
             <div class="sombra__secao">
-                <h2>BATUQUEIROS</h2>
+                <h2>{{ $drummerSection->title }}</h2>
             </div>
             <div class="titulo__secao">
-                <h2>Batuqueiros</h2>
+                <h2>{{ $drummerSection->title }}</h2>
             </div>
-            <p class="pilares">Nossos alunos</p>
+            <p class="pilares">{{ $drummerSection->phrase }}</p>
+            @endforeach
             <div class="batuqueiros__conteudo">
                 <div class="flex__batuqueiros">
                     <div class="borda__batuqueiros">

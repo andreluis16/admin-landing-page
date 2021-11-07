@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AreSectionController;
 use App\Http\Controllers\CardSectionController;
+use App\Http\Controllers\DrummerSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
@@ -52,6 +53,11 @@ Route::delete('/admin/slide-section/delete/{id}', [SlideSectionController::class
 Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');
 Route::get('/admin/projects-section/edit/{id}', [ProjectsSectionController::class, 'edit'])->name('admin.projects-section.edit');
 Route::put('/admin/projects-section/update/{id}', [ProjectsSectionController::class, 'update'])->name('admin.projects-section.update');
+
+//Admin Drummer Section
+Route::get('/admin/drummer-section', [DrummerSectionController::class, 'list'])->name('admin.drummer-section');
+Route::get('/admin/drummer-section/edit/{id}', [DrummerSectionController::class, 'edit'])->name('admin.drummer-section.edit');
+Route::put('/admin/drummer-section/update/{id}', [DrummerSectionController::class, 'update'])->name('admin.drummer-section.update');
 
 Auth::routes();
 
