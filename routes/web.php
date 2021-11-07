@@ -8,6 +8,7 @@ use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
 use App\Http\Controllers\ProjectsSectionController;
+use App\Http\Controllers\SkillCardSectionController;
 use App\Http\Controllers\SlideSectionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,14 @@ Route::post('/admin/slide-section/create-save', [SlideSectionController::class, 
 Route::get('/admin/slide-section/edit/{id}', [SlideSectionController::class, 'edit'])->name('admin.slide-section.edit');
 Route::put('/admin/slide-section/update/{id}', [SlideSectionController::class, 'update'])->name('admin.slide-section.update');
 Route::delete('/admin/slide-section/delete/{id}', [SlideSectionController::class, 'delete'])->name('admin.slide-section.delete');
+
+//Admin Skill Card Section
+Route::get('/admin/skill-card-section', [SkillCardSectionController::class, 'list'])->name('admin.skill-card-section');
+Route::get('/admin/skill-card-section/create-form', [SkillCardSectionController::class, 'createForm'])->name('admin.skill-card-section.create-form');
+Route::post('/admin/skill-card-section/create-save', [SkillCardSectionController::class, 'create'])->name('admin.skill-card-section.create-save');
+Route::get('/admin/skill-card-section/edit/{id}', [SkillCardSectionController::class, 'edit'])->name('admin.skill-card-section.edit');
+Route::put('/admin/skill-card-section/update/{id}', [SkillCardSectionController::class, 'update'])->name('admin.skill-card-section.update');
+Route::delete('/admin/skill-card-section/delete/{id}', [SkillCardSectionController::class, 'delete'])->name('admin.skill-card-section.delete');
 
 //Admin Projects Section
 Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');

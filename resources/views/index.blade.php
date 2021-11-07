@@ -124,58 +124,19 @@
             @endforeach
             <div class="batuqueiros__conteudo">
                 <div class="flex__batuqueiros">
+                    @foreach ($skillCardSections as $skillCardSection)
                     <div class="borda__batuqueiros">
                         <div class="box__imagem-batuqueiros">
-                            <img src="./img/percussao.jpeg " class="imagem__batuqueiros"
-                                alt="imagem dos alunos da percussão" style="position: relative;top: -145px;">
+                            <img src="{{ url("storage/{$skillCardSection->image}") }}" class="imagem__batuqueiros" alt="{{ $skillCardSection->title }}">
                         </div>
                         <div class="texto__batuqueiros">
-                            <h3 class="titulo__batuqueiros">Percussão</h3>
+                            <h3 class="titulo__batuqueiros">{{ $skillCardSection->title}}</h3>
                             <p class="descricao__batuqueiros">
-                                Os tios ensinam música popular brasileira e maranhense através de instrumentos percussivos
+                                {{ $skillCardSection->content }}
                             </p>
                         </div>
                     </div>
-                    <div class="borda__batuqueiros">
-                        <div class="box__imagem-batuqueiros">
-                            <img src="./img/musica.jpeg " class="imagem__batuqueiros"
-                                alt="imagem dos alunos da musicalização">
-                        </div>
-                        <div class="texto__batuqueiros">
-
-                            <h3 class="titulo__batuqueiros">Musicalização</h3>
-                            <p class="descricao__batuqueiros">
-                                Os batuqueiros começam a dar os primeiros passos no desenvolvimento de novas habilidades
-                                musicais.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="borda__batuqueiros">
-                        <div class="box__imagem-batuqueiros">
-                            <img src="./img/canto-coral.jpg " class="imagem__batuqueiros"
-                                alt="imagem dos alunos do canto coral">
-                        </div>
-                        <div class="texto__batuqueiros">
-                            <h3 class="titulo__batuqueiros">Canto Coral</h3>
-                            <p class="descricao__batuqueiros">
-                                Além de soltarem a voz, os batuqueiros também aprendem a noções de respiração, postura e
-                                novos exercícios para potencializar seus talentos
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="borda__batuqueiros">
-                        <div class="box__imagem-batuqueiros">
-                            <img src="./img/metais.jpeg " class="imagem__batuqueiros"
-                                alt="imagem dos alunos dos instrumentos de sopro">
-                        </div>
-                        <div class="texto__batuqueiros">
-                            <h3 class="titulo__batuqueiros">Metais</h3>
-                            <p class="descricao__batuqueiros">
-                                Os tios ensinam música popular brasileira e maranhense através de instrumentos percussivos
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
