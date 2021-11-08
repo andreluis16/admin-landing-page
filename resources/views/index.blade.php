@@ -232,27 +232,29 @@
         <!--SESSÂO CONTATO Kelvyn-->
         <!-- Adicionar a imagem de bg no CSS -->
         <section class="contato" id="contato">
+            @foreach ($contactSections as $contactSection)
             <figure class="contato__imagem"></figure>
             <div class="contato__endereco ">
                 <div class="contato__endereco___inf ">
                     <h3><i class="uil uil-map-marker "></i>Endereço:</h3>
-                    <p>Avenida Sarney Filho, n 40, CEP 65045-45, Vila Palmeira, São Luís/MA.</p>
+                    <p>{{ $contactSection->address }}</p>
                 </div>
                 <div class="contato__endereco___inf ">
                     <h3><i class="uil uil-envelope "></i>Email:</h3>
-                    <p>comunicacaobatucando@gmail.com</p>
+                    <p>{{ $contactSection->email }}</p>
                 </div>
                 <div class="contato__endereco___inf ">
                     <h3><i class="uil uil-phone-volume "></i>Telefone:</h3>
-                    <p>(98) 3333-3333</p>
+                    <p>{{ $contactSection->telephone }}</p>
                 </div>
 
             </div>
             <div class="contato__iframe ">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31722.845738646327!2d-47.40836518182185!3d-6.347965405995816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d083c45cb4ecc9%3A0xf8fab19121aec3bc!2sPorto%20Franco%2C%20MA%2C%2065970-000!5e0!3m2!1spt-BR!2sbr!4v1636358032067!5m2!1spt-BR!2sbr"
+                    src="{{ $contactSection->link }}"
                     style="border:0; " allowfullscreen=" " loading="lazy " class="contato__iframe___mapa "></iframe>
             </div>
+            @endforeach
         </section>
 
     </main>

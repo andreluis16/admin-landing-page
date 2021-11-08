@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AreSectionController;
 use App\Http\Controllers\CardSectionController;
+use App\Http\Controllers\ContactSectionController;
 use App\Http\Controllers\ContributorsSectionController;
 use App\Http\Controllers\DrummerSectionController;
 use App\Http\Controllers\HelperSectionController;
@@ -103,6 +104,11 @@ Route::put('/admin/help-section/update/{id}', [HelpSectionController::class, 'up
 Route::get('/admin/partiners-section', [PartnersSectionController::class, 'list'])->name('admin.partiners-section');
 Route::get('/admin/partiners-section/edit/{id}', [PartnersSectionController::class, 'edit'])->name('admin.partiners-section.edit');
 Route::put('/admin/partiners-section/update/{id}', [PartnersSectionController::class, 'update'])->name('admin.partiners-section.update');
+
+//Admin Contact Section
+Route::get('/admin/contact-section', [ContactSectionController::class, 'list'])->name('admin.contact-section');
+Route::get('/admin/contact-section/edit/{id}', [ContactSectionController::class, 'edit'])->name('admin.contact-section.edit');
+Route::put('/admin/contact-section/update/{id}', [ContactSectionController::class, 'update'])->name('admin.contact-section.update');
 
 Auth::routes();
 

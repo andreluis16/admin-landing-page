@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AreSection;
 use App\Models\CardSection;
+use App\Models\ContactSection;
 use App\Models\ContributorsSection;
 use App\Models\DrummerSection;
 use App\Models\HelperSection;
@@ -34,6 +35,7 @@ class LandingPageController extends Controller
         $helperSections = HelperSection::all();
         $partinersSections = PartnersSection::all();
         $contributorsSections = ContributorsSection::all();
+        $contactSections = ContactSection::all();
 
         return view('index', compact('logos', 'initialSections',
                                      'areSections', 'cardSections',
@@ -41,6 +43,6 @@ class LandingPageController extends Controller
                                      'drummerSections', 'skillCardSections',
                                      'videoSections', 'helpSections',
                                      'helperSections', 'partinersSections',
-                                     'contributorsSections'));
+                                     'contributorsSections', 'contactSections'));
     }
 }
