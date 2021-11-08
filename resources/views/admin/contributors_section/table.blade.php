@@ -11,7 +11,7 @@
     <div class="card mb-4">
         <div class="card-header">
             <i class="fas fa-table me-1"></i>
-            Intituto Batucando Skill Card Section
+            Intituto Batucando Contributors Section
         </div>
         <div class="card-body">
             <table id="datatablesSimple">
@@ -19,8 +19,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Image</th>
-                        <th>Title</th>
-                        <th>Content</th>
+                        <th>name</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -29,8 +28,7 @@
                     <tr>
                         <th>Id</th>
                         <th>Image</th>
-                        <th>Title</th>
-                        <th>Content</th>
+                        <th>name</th>
                         <th>Edit</th>
                         <th>Delete</th>
                     </tr>
@@ -39,13 +37,12 @@
                     @foreach ($sections as $section)
                         <tr>
                             <td>{{ $section->id }}</td>
-                            <td><img src="{{ url("storage/{$section->image}") }}" alt="{{ $section->title }}" class="img-small"></td>
-                            <td>{{ $section->title }}</td>
-                            <td>{{ \Illuminate\Support\Str::limit($section->content, 25, $end='...') }}</td>
+                            <td><img src="{{ url("storage/{$section->image}") }}" alt="{{ $section->name }}" class="img-small"></td>
+                            <td>{{ $section->name }}</td>
                             <td><a class="btn btn-primary"
-                                    href="{{ route('admin.skill-card-section.edit', $section->id) }}">Edit</a></td>
+                                    href="{{ route('admin.contributors-section.edit', $section->id) }}">Edit</a></td>
                             <td>
-                                <form method="POST" action="{{ route('admin.skill-card-section.delete', $section->id) }}">
+                                <form method="POST" action="{{ route('admin.contributors-section.delete', $section->id) }}">
                                     @csrf
                                     @method('delete')
                                     <button class="btn btn-danger">Delete</button>
@@ -59,7 +56,7 @@
         </div>
     </div>
     <div class="d-flex justify-content-end">
-        <a href="{{ route('admin.skill-card-section.create-form') }}" class="btn btn-success">Add Card</a>
+        <a href="{{ route('admin.contributors-section.create-form') }}" class="btn btn-success">Add Card</a>
     </div>
 
 @endsection

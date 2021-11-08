@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AreSectionController;
 use App\Http\Controllers\CardSectionController;
+use App\Http\Controllers\ContributorsSectionController;
 use App\Http\Controllers\DrummerSectionController;
 use App\Http\Controllers\HelperSectionController;
 use App\Http\Controllers\HelpSectionController;
@@ -69,6 +70,14 @@ Route::post('/admin/helper-section/create-save', [HelperSectionController::class
 Route::get('/admin/helper-section/edit/{id}', [HelperSectionController::class, 'edit'])->name('admin.helper-section.edit');
 Route::put('/admin/helper-section/update/{id}', [HelperSectionController::class, 'update'])->name('admin.helper-section.update');
 Route::delete('/admin/helper-section/delete/{id}', [HelperSectionController::class, 'delete'])->name('admin.helper-section.delete');
+
+//Admin Contributors Section
+Route::get('/admin/contributors-section', [ContributorsSectionController::class, 'list'])->name('admin.contributors-section');
+Route::get('/admin/contributors-section/create-form', [ContributorsSectionController::class, 'createForm'])->name('admin.contributors-section.create-form');
+Route::post('/admin/contributors-section/create-save', [ContributorsSectionController::class, 'create'])->name('admin.contributors-section.create-save');
+Route::get('/admin/contributors-section/edit/{id}', [ContributorsSectionController::class, 'edit'])->name('admin.contributors-section.edit');
+Route::put('/admin/contributors-section/update/{id}', [ContributorsSectionController::class, 'update'])->name('admin.contributors-section.update');
+Route::delete('/admin/contributors-section/delete/{id}', [ContributorsSectionController::class, 'delete'])->name('admin.contributors-section.delete');
 
 //Admin Projects Section
 Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');

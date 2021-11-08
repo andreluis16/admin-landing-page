@@ -144,6 +144,12 @@
                                         <a class="nav-link" href="{{ route('admin.partiners-section') }}">Partiners Section table</a>
                                     </nav>
                                 </div>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ route('admin.contributors-section') }}">Contributors Section table</a>
+                                    </nav>
+                                </div>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>

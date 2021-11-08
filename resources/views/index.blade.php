@@ -221,13 +221,11 @@
                 @endforeach
             </div>
             <div class="parceiros__logo">
+                @foreach ($contributorsSections as $contributorsSection)
                 <div>
-                    <img src="./img/logo_padiatra_marina_lopes_batucando_a_esperanca 1.png"
-                        alt="padiatra_marina_lopes_batucando_a_esperanca">
+                    <img src="{{ url("storage/{$contributorsSection->image}") }}" alt="{{ $contributorsSection->name }}">
                 </div>
-                <div>
-                    <img src="./img/SANTÊ_logo 1.png" alt="SANTÊ">
-                </div>
+                @endforeach
             </div>
         </section>
 
@@ -252,7 +250,7 @@
             </div>
             <div class="contato__iframe ">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.8985292945104!2d-44.25293638524412!3d-2.5399670981492366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMsKwMzInMjMuOSJTIDQ0wrAxNScwMi43Ilc!5e0!3m2!1spt-BR!2sbr!4v1634230331555!5m2!1spt-BR!2sbr "
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31722.845738646327!2d-47.40836518182185!3d-6.347965405995816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92d083c45cb4ecc9%3A0xf8fab19121aec3bc!2sPorto%20Franco%2C%20MA%2C%2065970-000!5e0!3m2!1spt-BR!2sbr!4v1636358032067!5m2!1spt-BR!2sbr"
                     style="border:0; " allowfullscreen=" " loading="lazy " class="contato__iframe___mapa "></iframe>
             </div>
         </section>
