@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AreSectionController;
 use App\Http\Controllers\CardSectionController;
 use App\Http\Controllers\DrummerSectionController;
+use App\Http\Controllers\HelperSectionController;
 use App\Http\Controllers\HelpSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
@@ -59,6 +60,14 @@ Route::post('/admin/skill-card-section/create-save', [SkillCardSectionController
 Route::get('/admin/skill-card-section/edit/{id}', [SkillCardSectionController::class, 'edit'])->name('admin.skill-card-section.edit');
 Route::put('/admin/skill-card-section/update/{id}', [SkillCardSectionController::class, 'update'])->name('admin.skill-card-section.update');
 Route::delete('/admin/skill-card-section/delete/{id}', [SkillCardSectionController::class, 'delete'])->name('admin.skill-card-section.delete');
+
+//Admin Helper Card Section
+Route::get('/admin/helper-section', [HelperSectionController::class, 'list'])->name('admin.helper-section');
+Route::get('/admin/helper-section/create-form', [HelperSectionController::class, 'createForm'])->name('admin.helper-section.create-form');
+Route::post('/admin/helper-section/create-save', [HelperSectionController::class, 'create'])->name('admin.helper-section.create-save');
+Route::get('/admin/helper-section/edit/{id}', [HelperSectionController::class, 'edit'])->name('admin.helper-section.edit');
+Route::put('/admin/helper-section/update/{id}', [HelperSectionController::class, 'update'])->name('admin.helper-section.update');
+Route::delete('/admin/helper-section/delete/{id}', [HelperSectionController::class, 'delete'])->name('admin.helper-section.delete');
 
 //Admin Projects Section
 Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');

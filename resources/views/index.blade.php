@@ -178,15 +178,11 @@
                                 <h3>{{ $helpSection->help_title }}</h3>
                 @endforeach
                 <ul>
-                    <li class="content__list ">
-                        <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Doações de instrumentos
+                    @foreach ($helperSections as $helperSection)
+                    <li class="content__list">
+                        <i class="content_ajuda_icon {{ $helperSection->icon }}"></i> {{ $helperSection->helper }}
                     </li>
-                    <li class="content__list ">
-                        <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Sendo voluntário
-                    </li>
-                    <li class="content__list ">
-                        <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Outra forma
-                    </li>
+                    @endforeach
                 </ul>
             </div>
             @foreach ($helpSections as $helpSection)
