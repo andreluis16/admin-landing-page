@@ -154,7 +154,7 @@
                         <a href=" "><i class="uil uil-play-circle "></i></a>
                         <h2>{{ $videoSection->title }}</h2>
                         <p>
-                            {{  $videoSection->phrase }}
+                            {{ $videoSection->phrase }}
                         </p>
                     </div>
                 </div>
@@ -164,46 +164,50 @@
         <!--SESSÂO COMO AJUDAR Kelvyn-->
         <section class="ajudar">
             <div class="container">
-                <div class="title">
-                    <div class="sombra__secao">
-                        <h2>AJUDAR</h2>
-                    </div>
-                    <h3 class="titulo__secao">Como ajudar?</h3>
-                    <p class="pilares">Saiba como ajudar</p> <!-- mobile first  -->
-                </div>
-                <div class="content__ajuda__prima">
-                    <div class="content__ajuda ">
-                        <div class="content__ajuda__div">
-                            <h3>Ficou interessado em ajudar?</h3>
-                            <ul>
-                                <li class="content__list ">
-                                    <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Doações de instrumentos
-                                </li>
-                                <li class="content__list ">
-                                    <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Sendo voluntário
-                                </li>
-                                <li class="content__list ">
-                                    <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Outra forma
-                                </li>
-                            </ul>
+                @foreach ($helpSections as $helpSection)
+                    <div class="title">
+                        <div class="sombra__secao">
+                            <h2>{{ $helpSection->title }}</h2>
                         </div>
-                        <p>
-                            Entre em contato com a gente que vamos estar lhe passando todas as informações.
-                        </p>
+                        <h3 class="titulo__secao">{{ $helpSection->title }}</h3>
+                        <p class="pilares">{{ $helpSection->phrase }}</p> <!-- mobile first  -->
                     </div>
-                    <div class="content__form ">
-                        <form action="#enviar-formulario ">
-                            <label>Nome:<input type="text " name="name " required /></label>
+                    <div class="content__ajuda__prima">
+                        <div class="content__ajuda ">
+                            <div class="content__ajuda__div">
+                                <h3>{{ $helpSection->help_title }}</h3>
+                @endforeach
+                <ul>
+                    <li class="content__list ">
+                        <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Doações de instrumentos
+                    </li>
+                    <li class="content__list ">
+                        <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Sendo voluntário
+                    </li>
+                    <li class="content__list ">
+                        <img class="content_ajuda_icon " src="./img/icons/ajudar.svg "> Outra forma
+                    </li>
+                </ul>
+            </div>
+            @foreach ($helpSections as $helpSection)
+            <p>
+                {{ $helpSection->help_info }}
+            </p>
+            @endforeach
+            </div>
+            <div class="content__form ">
+                <form action="#enviar-formulario ">
+                    <label>Nome:<input type="text " name="name " required /></label>
 
-                            <label>Email:<input type="email " required name="email "></label>
+                    <label>Email:<input type="email " required name="email "></label>
 
-                            <label>Telefone: <input type="number" name="number " required></label>
-                            <div class="content__button">
-                                <button class="content__enviar" type="submit">Enviar</button>
-                            </div>
-                        </form>
+                    <label>Telefone: <input type="number" name="number " required></label>
+                    <div class="content__button">
+                        <button class="content__enviar" type="submit">Enviar</button>
                     </div>
-                </div>
+                </form>
+            </div>
+            </div>
             </div>
         </section>
 

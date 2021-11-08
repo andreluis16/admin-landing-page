@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AreSectionController;
 use App\Http\Controllers\CardSectionController;
 use App\Http\Controllers\DrummerSectionController;
+use App\Http\Controllers\HelpSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
@@ -73,6 +74,11 @@ Route::put('/admin/drummer-section/update/{id}', [DrummerSectionController::clas
 Route::get('/admin/video-section', [VideoSectionController::class, 'list'])->name('admin.video-section');
 Route::get('/admin/video-section/edit/{id}', [VideoSectionController::class, 'edit'])->name('admin.video-section.edit');
 Route::put('/admin/video-section/update/{id}', [VideoSectionController::class, 'update'])->name('admin.video-section.update');
+
+//Admin Help Section
+Route::get('/admin/help-section', [HelpSectionController::class, 'list'])->name('admin.help-section');
+Route::get('/admin/help-section/edit/{id}', [HelpSectionController::class, 'edit'])->name('admin.help-section.edit');
+Route::put('/admin/help-section/update/{id}', [HelpSectionController::class, 'update'])->name('admin.help-section.update');
 
 Auth::routes();
 
