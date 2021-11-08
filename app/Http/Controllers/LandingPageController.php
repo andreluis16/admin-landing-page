@@ -9,6 +9,7 @@ use App\Models\HelperSection;
 use App\Models\HelpSection;
 use App\Models\InitialSection;
 use App\Models\Logo;
+use App\Models\PartnersSection;
 use App\Models\ProjectsSection;
 use App\Models\SkillCardSection;
 use App\Models\SlideSection;
@@ -30,12 +31,13 @@ class LandingPageController extends Controller
         $videoSections = VideoSection::all();
         $helpSections = HelpSection::all();
         $helperSections = HelperSection::all();
+        $partinersSections = PartnersSection::all();
 
         return view('index', compact('logos', 'initialSections',
                                      'areSections', 'cardSections',
                                      'projectsSections', 'slideSections',
                                      'drummerSections', 'skillCardSections',
                                      'videoSections', 'helpSections',
-                                     'helperSections' ));
+                                     'helperSections', 'partinersSections'));
     }
 }

@@ -9,6 +9,7 @@ use App\Http\Controllers\HelpSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
+use App\Http\Controllers\PartnersSectionController;
 use App\Http\Controllers\ProjectsSectionController;
 use App\Http\Controllers\SkillCardSectionController;
 use App\Http\Controllers\SlideSectionController;
@@ -88,6 +89,11 @@ Route::put('/admin/video-section/update/{id}', [VideoSectionController::class, '
 Route::get('/admin/help-section', [HelpSectionController::class, 'list'])->name('admin.help-section');
 Route::get('/admin/help-section/edit/{id}', [HelpSectionController::class, 'edit'])->name('admin.help-section.edit');
 Route::put('/admin/help-section/update/{id}', [HelpSectionController::class, 'update'])->name('admin.help-section.update');
+
+//Admin Partiners Section
+Route::get('/admin/partiners-section', [PartnersSectionController::class, 'list'])->name('admin.partiners-section');
+Route::get('/admin/partiners-section/edit/{id}', [PartnersSectionController::class, 'edit'])->name('admin.partiners-section.edit');
+Route::put('/admin/partiners-section/update/{id}', [PartnersSectionController::class, 'update'])->name('admin.partiners-section.update');
 
 Auth::routes();
 

@@ -210,13 +210,15 @@
         <!--SESSÂO PARCEIROS Kelvyn-->
         <section class="parceiros">
             <div class="parceiros__content ">
+                @foreach ($partinersSections as $partinersSection)
                 <div class="sombra__secao">
-                    <h2>PARCEIROS</h2>
+                    <h2>{{ $partinersSection->title}}</h2>
                 </div>
                 <div class="titulo__secao">
-                    <h2>Parceiros</h2>
+                    <h2>{{ $partinersSection->title }}</h2>
                 </div>
-                <p class="pilares">Quem sempre apoia nosso trabalho</p>
+                <p class="pilares">{{ $partinersSection->phrase }}</p>
+                @endforeach
             </div>
             <div class="parceiros__logo">
                 <div>
