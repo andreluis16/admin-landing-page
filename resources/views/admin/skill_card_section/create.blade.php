@@ -14,7 +14,7 @@
     @endif
 
 
-    <form method="POST" action="{{ route('admin.skill-card-section.create-save') }}" class="m-5" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('admin.contributors-section.create-save') }}" class="m-5" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="">Image</label>
