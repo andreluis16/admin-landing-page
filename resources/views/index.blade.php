@@ -179,16 +179,16 @@
                 @endforeach
                 <ul>
                     @foreach ($helperSections as $helperSection)
-                    <li class="content__list">
-                        <i class="content_ajuda_icon {{ $helperSection->icon }}"></i> {{ $helperSection->helper }}
-                    </li>
+                        <li class="content__list">
+                            <i class="content_ajuda_icon {{ $helperSection->icon }}"></i> {{ $helperSection->helper }}
+                        </li>
                     @endforeach
                 </ul>
             </div>
             @foreach ($helpSections as $helpSection)
-            <p>
-                {{ $helpSection->help_info }}
-            </p>
+                <p>
+                    {{ $helpSection->help_info }}
+                </p>
             @endforeach
             </div>
             <div class="content__form ">
@@ -211,20 +211,21 @@
         <section class="parceiros">
             <div class="parceiros__content ">
                 @foreach ($partinersSections as $partinersSection)
-                <div class="sombra__secao">
-                    <h2>{{ $partinersSection->title}}</h2>
-                </div>
-                <div class="titulo__secao">
-                    <h2>{{ $partinersSection->title }}</h2>
-                </div>
-                <p class="pilares">{{ $partinersSection->phrase }}</p>
+                    <div class="sombra__secao">
+                        <h2>{{ $partinersSection->title }}</h2>
+                    </div>
+                    <div class="titulo__secao">
+                        <h2>{{ $partinersSection->title }}</h2>
+                    </div>
+                    <p class="pilares">{{ $partinersSection->phrase }}</p>
                 @endforeach
             </div>
             <div class="parceiros__logo">
                 @foreach ($contributorsSections as $contributorsSection)
-                <div>
-                    <img src="{{ url("storage/{$contributorsSection->image}") }}" alt="{{ $contributorsSection->name }}">
-                </div>
+                    <div>
+                        <img src="{{ url("storage/{$contributorsSection->image}") }}"
+                            alt="{{ $contributorsSection->name }}">
+                    </div>
                 @endforeach
             </div>
         </section>
@@ -233,27 +234,26 @@
         <!-- Adicionar a imagem de bg no CSS -->
         <section class="contato" id="contato">
             @foreach ($contactSections as $contactSection)
-            <figure class="contato__imagem"></figure>
-            <div class="contato__endereco ">
-                <div class="contato__endereco___inf ">
-                    <h3><i class="uil uil-map-marker "></i>Endereço:</h3>
-                    <p>{{ $contactSection->address }}</p>
-                </div>
-                <div class="contato__endereco___inf ">
-                    <h3><i class="uil uil-envelope "></i>Email:</h3>
-                    <p>{{ $contactSection->email }}</p>
-                </div>
-                <div class="contato__endereco___inf ">
-                    <h3><i class="uil uil-phone-volume "></i>Telefone:</h3>
-                    <p>{{ $contactSection->telephone }}</p>
-                </div>
+                <figure class="contato__imagem"></figure>
+                <div class="contato__endereco ">
+                    <div class="contato__endereco___inf ">
+                        <h3><i class="uil uil-map-marker "></i>Endereço:</h3>
+                        <p>{{ $contactSection->address }}</p>
+                    </div>
+                    <div class="contato__endereco___inf ">
+                        <h3><i class="uil uil-envelope "></i>Email:</h3>
+                        <p>{{ $contactSection->email }}</p>
+                    </div>
+                    <div class="contato__endereco___inf ">
+                        <h3><i class="uil uil-phone-volume "></i>Telefone:</h3>
+                        <p>{{ $contactSection->telephone }}</p>
+                    </div>
 
-            </div>
-            <div class="contato__iframe ">
-                <iframe
-                    src="{{ $contactSection->link }}"
-                    style="border:0; " allowfullscreen=" " loading="lazy " class="contato__iframe___mapa "></iframe>
-            </div>
+                </div>
+                <div class="contato__iframe ">
+                    <iframe src="{{ $contactSection->link }}" style="border:0; " allowfullscreen=" " loading="lazy "
+                        class="contato__iframe___mapa "></iframe>
+                </div>
             @endforeach
         </section>
 
@@ -262,10 +262,10 @@
     <!--RODAPÉ - Neilton-->
     <footer class="rodape ">
         <div class="rodape__icones ">
-            <a href="# "><img class="facebook__icon " src="./img/icons/facebook-icon.svg " alt=" "></a>
-            <a href="https://www.instagram.com/institutobatucandoaesperanca/?hl=pt-br"><img class="instagram__icon "
-                    src="./img/icons/instagram-icon.svg " alt=" "></a>
-            <a href="# "><img class="twitter__icon " src="./img/icons/twitter-icon.svg " alt=" "></a>
+
+            @foreach ($networksSections as $networksSection)
+                <a href="{{ $networksSection->link }}" target="_blank"><img class="facebook__icon" src="{{ urL("storage/{$networksSection->image}") }}" alt=" "></a>
+            @endforeach
         </div>
         <div class="rodape__copyright ">
             <p>© Copyright “nome da equipe”. All Rights Reserved</p>

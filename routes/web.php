@@ -11,6 +11,7 @@ use App\Http\Controllers\HelpSectionController;
 use App\Http\Controllers\InitialSectionController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\LogoController;
+use App\Http\Controllers\NetworksSectionController;
 use App\Http\Controllers\PartnersSectionController;
 use App\Http\Controllers\ProjectsSectionController;
 use App\Http\Controllers\SkillCardSectionController;
@@ -79,6 +80,14 @@ Route::post('/admin/contributors-section/create-save', [ContributorsSectionContr
 Route::get('/admin/contributors-section/edit/{id}', [ContributorsSectionController::class, 'edit'])->name('admin.contributors-section.edit');
 Route::put('/admin/contributors-section/update/{id}', [ContributorsSectionController::class, 'update'])->name('admin.contributors-section.update');
 Route::delete('/admin/contributors-section/delete/{id}', [ContributorsSectionController::class, 'delete'])->name('admin.contributors-section.delete');
+
+//Admin Networks Section
+Route::get('/admin/networks-section', [NetworksSectionController::class, 'list'])->name('admin.networks-section');
+Route::get('/admin/networks-section/create-form', [NetworksSectionController::class, 'createForm'])->name('admin.networks-section.create-form');
+Route::post('/admin/networks-section/create-save', [NetworksSectionController::class, 'create'])->name('admin.networks-section.create-save');
+Route::get('/admin/networks-section/edit/{id}', [NetworksSectionController::class, 'edit'])->name('admin.networks-section.edit');
+Route::put('/admin/networks-section/update/{id}', [NetworksSectionController::class, 'update'])->name('admin.networks-section.update');
+Route::delete('/admin/networks-section/delete/{id}', [NetworksSectionController::class, 'delete'])->name('admin.networks-section.delete');
 
 //Admin Projects Section
 Route::get('/admin/projects-section', [ProjectsSectionController::class, 'list'])->name('admin.projects-section');

@@ -11,6 +11,7 @@ use App\Models\HelperSection;
 use App\Models\HelpSection;
 use App\Models\InitialSection;
 use App\Models\Logo;
+use App\Models\NetworksSection;
 use App\Models\PartnersSection;
 use App\Models\ProjectsSection;
 use App\Models\SkillCardSection;
@@ -36,6 +37,7 @@ class LandingPageController extends Controller
         $partinersSections = PartnersSection::all();
         $contributorsSections = ContributorsSection::all();
         $contactSections = ContactSection::all();
+        $networksSections = NetworksSection::all();
 
         return view('index', compact('logos', 'initialSections',
                                      'areSections', 'cardSections',
@@ -43,6 +45,7 @@ class LandingPageController extends Controller
                                      'drummerSections', 'skillCardSections',
                                      'videoSections', 'helpSections',
                                      'helperSections', 'partinersSections',
-                                     'contributorsSections', 'contactSections'));
+                                     'contributorsSections', 'contactSections',
+                                     'networksSections'));
     }
 }
