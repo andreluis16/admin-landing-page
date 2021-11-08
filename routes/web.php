@@ -10,6 +10,7 @@ use App\Http\Controllers\LogoController;
 use App\Http\Controllers\ProjectsSectionController;
 use App\Http\Controllers\SkillCardSectionController;
 use App\Http\Controllers\SlideSectionController;
+use App\Http\Controllers\VideoSectionController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -67,6 +68,11 @@ Route::put('/admin/projects-section/update/{id}', [ProjectsSectionController::cl
 Route::get('/admin/drummer-section', [DrummerSectionController::class, 'list'])->name('admin.drummer-section');
 Route::get('/admin/drummer-section/edit/{id}', [DrummerSectionController::class, 'edit'])->name('admin.drummer-section.edit');
 Route::put('/admin/drummer-section/update/{id}', [DrummerSectionController::class, 'update'])->name('admin.drummer-section.update');
+
+//Admin Video Section
+Route::get('/admin/video-section', [VideoSectionController::class, 'list'])->name('admin.video-section');
+Route::get('/admin/video-section/edit/{id}', [VideoSectionController::class, 'edit'])->name('admin.video-section.edit');
+Route::put('/admin/video-section/update/{id}', [VideoSectionController::class, 'update'])->name('admin.video-section.update');
 
 Auth::routes();
 

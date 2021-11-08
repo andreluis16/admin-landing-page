@@ -92,17 +92,17 @@
             <article class="c-carousel c-carousel--simple">
                 <div class="c-carousel__slides js-carousel--simple">
                     @foreach ($slideSections as $slideSection)
-                    <article class="c-carousel__slide">
-                        <div class="container__projeto">
-                            <figure class="img{{ $slideSection->id }}"></figure>
-                        </div>
-                        <div class="texto__projeto">
-                            <h3>{{ $slideSection->title }}</h3>
-                            <p>
-                                {{ $slideSection->content }}
-                            </p>
-                        </div>
-                    </article>
+                        <article class="c-carousel__slide">
+                            <div class="container__projeto">
+                                <figure class="img{{ $slideSection->id }}"></figure>
+                            </div>
+                            <div class="texto__projeto">
+                                <h3>{{ $slideSection->title }}</h3>
+                                <p>
+                                    {{ $slideSection->content }}
+                                </p>
+                            </div>
+                        </article>
                     @endforeach
 
                 </div>
@@ -114,28 +114,29 @@
         <!--SESSÃO NOSSOS BATUQUEIROS Beatriz-->
         <section class="batuqueiros" id="batuqueiros">
             @foreach ($drummerSections as $drummerSection)
-            <div class="sombra__secao">
-                <h2>{{ $drummerSection->title }}</h2>
-            </div>
-            <div class="titulo__secao">
-                <h2>{{ $drummerSection->title }}</h2>
-            </div>
-            <p class="pilares">{{ $drummerSection->phrase }}</p>
+                <div class="sombra__secao">
+                    <h2>{{ $drummerSection->title }}</h2>
+                </div>
+                <div class="titulo__secao">
+                    <h2>{{ $drummerSection->title }}</h2>
+                </div>
+                <p class="pilares">{{ $drummerSection->phrase }}</p>
             @endforeach
             <div class="batuqueiros__conteudo">
                 <div class="flex__batuqueiros">
                     @foreach ($skillCardSections as $skillCardSection)
-                    <div class="borda__batuqueiros">
-                        <div class="box__imagem-batuqueiros">
-                            <img src="{{ url("storage/{$skillCardSection->image}") }}" class="imagem__batuqueiros" alt="{{ $skillCardSection->title }}">
+                        <div class="borda__batuqueiros">
+                            <div class="box__imagem-batuqueiros">
+                                <img src="{{ url("storage/{$skillCardSection->image}") }}" class="imagem__batuqueiros"
+                                    alt="{{ $skillCardSection->title }}">
+                            </div>
+                            <div class="texto__batuqueiros">
+                                <h3 class="titulo__batuqueiros">{{ $skillCardSection->title }}</h3>
+                                <p class="descricao__batuqueiros">
+                                    {{ $skillCardSection->content }}
+                                </p>
+                            </div>
                         </div>
-                        <div class="texto__batuqueiros">
-                            <h3 class="titulo__batuqueiros">{{ $skillCardSection->title}}</h3>
-                            <p class="descricao__batuqueiros">
-                                {{ $skillCardSection->content }}
-                            </p>
-                        </div>
-                    </div>
                     @endforeach
                 </div>
             </div>
@@ -144,18 +145,20 @@
         <!--SESSÂO VEJA O VIDEO Beatriz-->
         <section class="institucional" id="video">
             <!-- <video src="" class="video__intitucional"></video> -->
-            <div class="institucional__container">
-                <div class="institucional__thumb">
-                    <figure class="thumb__video"></figure>
+            @foreach ($videoSections as $videoSection)
+                <div class="institucional__container">
+                    <div class="institucional__thumb">
+                        <figure class="thumb__video"></figure>
+                    </div>
+                    <div class="institucional__texto">
+                        <a href=" "><i class="uil uil-play-circle "></i></a>
+                        <h2>{{ $videoSection->title }}</h2>
+                        <p>
+                            {{  $videoSection->phrase }}
+                        </p>
+                    </div>
                 </div>
-                <div class="institucional__texto">
-                    <a href=" "><i class="uil uil-play-circle "></i></a>
-                    <h2>VEJA O VÍDEO</h2>
-                    <p>
-                        Os tios ensinam música popular brasileira e maranhense através de instrumentos percussivos
-                    </p>
-                </div>
-            </div>
+            @endforeach
         </section>
 
         <!--SESSÂO COMO AJUDAR Kelvyn-->

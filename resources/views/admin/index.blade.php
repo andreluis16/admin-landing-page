@@ -120,6 +120,12 @@
                                         <a class="nav-link" href="{{ route('admin.skill-card-section') }}">Skill Card Section table</a>
                                     </nav>
                                 </div>
+                                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne"
+                                    data-bs-parent="#sidenavAccordionPages">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ route('admin.video-section') }}">Video Section table</a>
+                                    </nav>
+                                </div>
                             </nav>
                         </div>
                         <div class="sb-sidenav-menu-heading">Addons</div>

@@ -22,8 +22,7 @@
             width: 100%;
         }
 
-        @foreach ($slideSections as $key => $slideSection)
-        .img{{ $slideSection->id }} {
+        @foreach ($slideSections as $key => $slideSection).img{{ $slideSection->id }} {
             background-image: url({{ url("storage/{$slideSection->image}") }});
             background-size: cover;
             background-position: center;
@@ -33,8 +32,20 @@
             width: 100%;
             height: 100vh;
         }
-
         @endforeach
+
+        .institucional__thumb {
+            @foreach ($videoSections as $videoSection)
+            background-image: url({{ url("storage/{$videoSection->image}") }});
+            @endforeach
+            background-size: cover;
+            position: absolute;
+            -webkit-mask-image: linear-gradient(to top, transparent 3%, black 200%);
+            filter: brightness(80%);
+            width: 100%;
+            height: 283px;
+            margin: 0;
+        }
 
     </style>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

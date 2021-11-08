@@ -10,6 +10,7 @@ use App\Models\Logo;
 use App\Models\ProjectsSection;
 use App\Models\SkillCardSection;
 use App\Models\SlideSection;
+use App\Models\VideoSection;
 use Illuminate\Http\Request;
 
 class LandingPageController extends Controller
@@ -24,10 +25,12 @@ class LandingPageController extends Controller
         $slideSections = SlideSection::all();
         $drummerSections = DrummerSection::all();
         $skillCardSections = SkillCardSection::all();
+        $videoSections = VideoSection::all();
 
         return view('index', compact('logos', 'initialSections',
                                      'areSections', 'cardSections',
                                      'projectsSections', 'slideSections',
-                                      'drummerSections', 'skillCardSections'));
+                                     'drummerSections', 'skillCardSections',
+                                     'videoSections'   ));
     }
 }
